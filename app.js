@@ -142,7 +142,7 @@ app.use(history({ index: '/index.html' }));
 app.use(staticMdl);
 
 
-app.listen({port: 8000}, async() => {
+app.listen({port: process.env.PORT || 8000}, async() => {
     await sequelize.authenticate();
 });
 
